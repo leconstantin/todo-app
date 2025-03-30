@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { getData } from "../payment/page";
 import { DataTable } from "../payment/data-table";
-import { columns } from "../payment/columns";
 import Link from "next/link";
+import { columns } from "./_components/columns";
+import prisma from "@/lib/prisma";
 
 export default async function page() {
-  const data = await getData();
+  const data = await prisma.task.findMany();
 
   return (
     <div className="hidden flex-col md:flex">
