@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
-import { getData } from "../payment/page";
-import { DataTable } from "../payment/data-table";
+
 import Link from "next/link";
 import { columns } from "./_components/columns";
 import prisma from "@/lib/prisma";
+import { DataTable } from "./_components/data-table";
 
 export default async function page() {
   const data = await prisma.task.findMany();
