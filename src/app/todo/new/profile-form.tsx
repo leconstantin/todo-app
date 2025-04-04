@@ -31,6 +31,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import {
+  ArrowDown,
   ArrowRight,
   ArrowUp,
   CalendarIcon,
@@ -71,6 +72,8 @@ const status = [
 const priority = [
   { label: "High", value: "high", icon: ArrowUp },
   { label: "Medium", value: "medium", icon: ArrowRight },
+  { label: "Low", value: "low", icon: ArrowDown },
+
 ] as const;
 
 const profileFormSchema = z.object({

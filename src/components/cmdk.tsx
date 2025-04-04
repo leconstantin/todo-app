@@ -5,6 +5,7 @@ import {
   Calculator,
   Calendar,
   CreditCard,
+  Grid,
   HandCoins,
   Home,
   LayoutDashboard,
@@ -76,9 +77,10 @@ export function CommandDialogDemo() {
           <CommandSeparator />
           <CommandGroup heading="Settings">
             <CommandItem>
-              <User />
-              <span>Profile</span>
-              <CommandShortcut>⌘P</CommandShortcut>
+            <Link href="/grid" className="flex gap-2">
+                <Grid />
+                <span>Bento Grid</span>
+              </Link>
             </CommandItem>
             <CommandItem>
               <CreditCard />
